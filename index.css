@@ -14,9 +14,11 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: "Klee One", cursive;
-  color: #212427;
+  color: white;
+  background-color: #e2cfea;
   font-size: 16px;
   display: grid;
+  grid-template-rows: 80px 2fr 1fr;
   padding: 20px;
   gap: 10px;
 }
@@ -42,4 +44,58 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+header a {
+  text-decoration: none;
+}
+.header-nav {
+  padding: 0 20px;
+  background-color: #392f5a;
+  display: flex;
+  justify-content: space-between;
+}
+#brand-name {
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+#brand-name a {
+  color: #e2cfea;
+}
+.nav-ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.nav-ul a {
+  color: #e2cfea;
+}
+.nav-ul li {
+  padding: 5px;
+  margin-left: 10px;
+}
+.nav-ul li:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  font-weight: bold;
+}
+#login,
+#signup {
+  border-radius: 5px;
+  padding: 5px 8px;
+}
+#login {
+  border: 1px solid #05a8aa;
+}
+#login a {
+  color: #05a8aa;
+}
+#signup {
+  border: 1px solid #db3069;
+}
+#signup a {
+  color: #db3069;
 }
