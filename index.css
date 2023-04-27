@@ -244,7 +244,7 @@ select {
   cursor: pointer;
   padding: var(--underline-gap, 1rem);
   border: 0;
-  border-bottom: 0.2rem solid hsl(var(--clr-light) 0);
+  border-bottom: 0.2rem solid hsl(var(--clr-light) / 0);
 }
 
 .underline-indicators > *:hover,
