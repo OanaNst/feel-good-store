@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
   </head>
   <body class="ff-serif">
     <header class="primary-header flex">
@@ -16,9 +17,15 @@
           class="store-logo"
         />
       </div>
-      <button>Menu</button>
+      <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+        <span class="sr-only" aria-expanded="false">Menu</span>
+      </button>
       <nav>
-        <ul class="primary-navigation underline-indicators flex">
+        <ul
+          id="primary-navigation"
+          data-visible="false"
+          class="primary-navigation underline-indicators flex"
+        >
           <li class="active">
             <a href="index.html" class="uppercase text-light letter-spacing"
               >Home</a
