@@ -137,11 +137,14 @@ select {
   gap: var(--gap, 1rem);
 }
 
-.flex-column {
+.flex-feelings {
+  height: 70%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  gap: var(--gap, 1rem);
+  gap: var(--gap, 2rem);
+  justify-content: center;
+  align-items: center;
 }
 
 .grid {
@@ -317,6 +320,12 @@ select {
   align-items: center;
 }
 
+.secondary-header {
+  width: 100%;
+  text-align: center;
+  margin-block: 3rem;
+}
+
 .store-logo {
   width: 80px;
   height: auto;
@@ -452,20 +461,33 @@ select {
 }
 
 .card-container {
-  width: 200px;
-  height: 200px;
-  border-radius: 15px;
+  width: 300px;
+  height: 300px;
+  perspective: 800px;
+}
+
+.card-container:hover > .card {
+  cursor: pointer;
+  transform: rotateY(180deg);
 }
 
 .card {
   height: 100%;
   width: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
 .card-front,
 .card-back {
   height: 100%;
   width: 100%;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 5px 2px hsl(var(--clr-medium) / 0.3);
+  position: absolute;
+  backface-visibility: hidden;
 }
 
 .card-front {
@@ -473,6 +495,12 @@ select {
 }
 
 .card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 .cat {
