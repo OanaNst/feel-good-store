@@ -98,7 +98,8 @@ body {
 /* make images easier to work with*/
 
 img,
-picture {
+picture,
+svg {
   max-width: 100%;
   display: block;
 }
@@ -133,6 +134,13 @@ select {
 
 .flex {
   display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   gap: var(--gap, 1rem);
 }
 
@@ -304,15 +312,15 @@ select {
 
 /* primary-header*/
 
-.store-logo {
-  width: 80px;
-  height: auto;
-  margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
-}
-
 .primary-header {
   justify-content: space-between;
   align-items: center;
+}
+
+.store-logo {
+  width: 80px;
+  height: auto;
+  margin: 1.5rem clamp(1rem, 5vw, 3rem);
 }
 
 .primary-navigation {
@@ -437,11 +445,52 @@ select {
 
 /* body content */
 
-.home-feelings-sample {
+.feelings-list {
   list-style: none;
   padding: 0;
-  margin-top: 2rem;
+  margin: 0;
 }
-.home-feelings-sample li {
-  margin-top: 2rem;
+
+.card-container {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+}
+
+.card-front,
+.card-back {
+  height: 100%;
+  width: 100%;
+}
+
+.card-front {
+  background-repeat: no-repeat;
+}
+
+.card-back {
+}
+
+.cat {
+  background-image: url(images/cat.svg);
+}
+
+.fresh-sheets {
+  background-image: url(images/fresh-sheets.svg);
+}
+
+.rain {
+  background-image: url(images/rain.svg);
+}
+
+.water {
+  background-image: url(images/water.svg);
+}
+
+.hug {
+  background-image: url(images/hug.svg);
 }
