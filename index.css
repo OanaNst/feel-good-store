@@ -283,7 +283,7 @@ select {
 /* -------------------------- */
 
 .large-button {
-  font-size: clamp(0.5rem, 10vw, 1.5rem);
+  font-size: clamp(1.5rem, 10vw, 2rem);
   /*font-size: 2rem;*/
   position: relative;
   display: inline-grid;
@@ -544,14 +544,14 @@ select {
 }
 
 .account-main {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .wrapper {
-  /*position: relative;*/
+  position: relative;
   width: 400px;
   height: 440px;
   background: hsl(var(--clr-medium) / 0.45);
@@ -561,11 +561,38 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  transition: height 0.2s ease;
+}
+
+.wrapper.active {
+  height: 520px;
 }
 
 .wrapper .form-box {
   width: 100%;
   padding: 40px;
+}
+
+.wrapper .form-box.login {
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+  position: absolute;
+  transition: none;
+  transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register {
+  transition: transform 0.3s ease;
+  transform: translateX(0);
 }
 
 .form-box h2 {
