@@ -1,0 +1,242 @@
+/* -------------------------- */
+/* Custom properties          */
+/* -------------------------- */
+
+:root {
+  /* colors */
+  --clr-dark: 232 17% 35%;
+  --clr-medium: 309 6% 58%;
+  --clr-light: 21 35% 92%;
+
+  /* font-sizes*/
+  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+  --fs-800: 3.5rem;
+  --fs-700: 1.5rem;
+  --fs-600: 1rem;
+  --fs-500: 1.75rem;
+  --fs-400: 0.9375rem;
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
+
+  /* font-families*/
+  --ff-serif: Georgia, "Times New Roman", Times, serif;
+}
+@media (min-width: 35em) {
+  :root {
+    /* font-sizes*/
+    --fs-800: 5rem;
+    --fs-700: 2.5rem;
+    --fs-600: 1.5rem;
+    --fs-400: 1rem;
+  }
+}
+
+@media (min-width: 45em) {
+  :root {
+    /* font-sizes*/
+    --fs-800: 6.25rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-400: 1.125rem;
+  }
+}
+
+/* colors */
+
+.bg-dark {
+  background-color: hsl(var(--clr-dark));
+}
+.bg-medium {
+  background-color: hsl(var(--clr-medium));
+}
+.bg-light {
+  background-color: hsl(var(--clr-light));
+}
+
+.text-dark {
+  color: hsl(var(--clr-dark));
+}
+.text-medium {
+  color: hsl(var(--clr-medium));
+}
+.text-light {
+  color: hsl(var(--clr-light));
+}
+
+/* typography */
+
+.ff-serif {
+  font-family: var(--ff-serif);
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.letter-spacing {
+  letter-spacing: 2px;
+}
+.fs-900 {
+  font-size: var(--fs-900);
+}
+.fs-800 {
+  font-size: var(--fs-800);
+}
+.fs-700 {
+  font-size: var(--fs-700);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+  line-height: 1.1;
+}
+
+/* ----------------------------- */
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  width: 100%;
+  max-width: 820px;
+  background: hsl(var(--clr-medium) / 0.45);
+  backdrop-filter: blur(1.5rem);
+  box-shadow: 0 0 5px 2px hsl(var(--clr-medium) / 0.3);
+  border-radius: 15px;
+  z-index: 1000;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-form {
+  background-color: hsl(var(--clr-light));
+}
+
+.contact-form:before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-color: hsl(var(--clr-light));
+  transform: rotate(45deg);
+  top: 50px;
+  left: 398px;
+}
+
+form {
+  padding: 2.3rem 2.2rem;
+  z-index: 10;
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  text-transform: uppercase;
+  color: hsl(var(--clr-dark));
+  font-weight: 500;
+  font-size: var(--fs-500);
+  line-height: 1;
+  margin-bottom: 0.7rem;
+}
+
+.input-container {
+  position: relative;
+  margin: 1rem 0;
+}
+
+.input {
+  font-family: var(--ff-serif);
+  width: 100%;
+  outline: none;
+  border: 2px solid hsl(var(--clr-dark));
+  background: none;
+  padding: 0.6rem 1.2rem;
+  color: hsl(var(--clr-dark));
+  font-weight: 500;
+  font-size: var(--fs-300);
+  letter-spacing: 0.5px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+textarea.input {
+  padding: 0.8rem 1.2rem;
+  min-height: 150px;
+  resize: none;
+  overflow-y: auto;
+}
+
+.input-container label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  padding: 0 0.4rem;
+  color: hsl(var(--clr-dark));
+  font-size: var(--fs-200);
+  font-weight: 400;
+  pointer-events: none;
+  z-index: 1000;
+  transition: 0.5s;
+}
+
+.input-container.textarea label {
+  top: 1rem;
+  transform: translateY(0);
+}
+
+.btn {
+  padding: 0.6rem 1.3rem;
+  border: 2px solid hsl(var(--clr-medium));
+  outline: none;
+  border-radius: 10px;
+  background-color: hsl(var(--clr-medium));
+  color: hsl(var(--clr-light));
+  font-weight: 500;
+  font-size: var(--fs-400);
+  line-height: 1;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: hsl(var(--clr-dark));
+}
+
+.input-container span {
+  color: black;
+  position: absolute;
+  top: 0;
+  left: 25px;
+  transform: translateY(-50%);
+  font-size: var(--fs-200);
+  padding: 0 0.4rem;
+  color: transparent;
+  pointer-events: none;
+  z-index: 500;
+}
