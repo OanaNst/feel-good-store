@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
     <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="about.css" />
     <script src="../index.js" defer></script>
   </head>
   <body>
@@ -47,5 +48,37 @@
         </ul>
       </nav>
     </header>
+    <main class="container">
+      <div class="form">
+        <div class="contact-info"></div>
+
+        <div class="contact-form">
+          <form action="about.html">
+            <h2 class="title">Contact us</h2>
+            <div class="input-container">
+              <input type="text" name="name" class="input" />
+              <label for="">Username</label>
+              <span>Username</span>
+            </div>
+            <div class="input-container">
+              <input type="email" name="email" class="input" />
+              <label for="">Email</label>
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input" />
+              <label for="">Phone</label>
+              <span>Phone</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input"></textarea>
+              <label for="">Message</label>
+              <span>Message</span>
+            </div>
+            <input type="submit" value="Send" class="btn" />
+          </form>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
