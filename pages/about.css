@@ -240,3 +240,37 @@ textarea.input {
   pointer-events: none;
   z-index: 500;
 }
+
+.input-container span:before,
+.input-container span::after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  opacity: 0;
+  transition: 0.3s;
+  height: 5px;
+  background-color: hsl(var(--clr-light));
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-container span::before {
+  left: 50%;
+}
+
+.input-container span::after {
+  right: 50%;
+}
+
+.input-container.focus label {
+  top: 0;
+  transform: translateY(-50%);
+  left: 25px;
+  font-size: var(--fs-200);
+}
+
+.input-container.focus span:before,
+.input-container.focus span:after {
+  width: 50%;
+  opacity: 1;
+}
